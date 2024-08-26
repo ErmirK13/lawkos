@@ -1,0 +1,122 @@
+.practice-container {
+  padding: 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .title {
+      font-size: 55px;
+      line-height: 55px;
+      color: #000000;
+      font-weight: 400;
+      font-family: "Playfair Display";
+      position: relative;
+    }
+
+    .underline {
+      width: 35%;
+      height: 2px;
+    }
+
+    .view-all {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .areas-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    
+
+    .area-item {
+      flex: 1 1 calc(35.33% - 50px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+
+      .area-img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+      .area-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #000;
+      }
+
+      .area-text {
+        font-size: 14px;
+        line-height: 20px;
+        color: #a9a7a7 !important;
+      }
+    }
+  }
+
+  .bottom-image {
+    position: relative;
+    margin-top: 40px;
+
+    .image {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 35px;
+    }
+
+    .text-overlay {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: calc(50% - 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+
+      .bottom-text {
+        font-size: 24px;
+        line-height: 28px;
+        color: #000000;
+        font-weight: 400;
+        font-family: "Playfair Display";
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .areas-list {
+    .area-item {
+      flex: 1 1 calc(60% - 10px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .areas-list {
+    .area-item {
+      flex: 1 1 100%;
+    }
+  }
+}

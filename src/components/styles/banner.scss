@@ -1,0 +1,114 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+  margin-top: 100px;
+  align-items: center;
+  gap: 3rem;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15rem;
+}
+
+.banner h1 {
+  font-size: 41px;
+line-height: 41px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  text-align: left;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.aside p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.buttonn {
+  background-color: #a67b48;
+  color: #fff;
+  margin-top: 20px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #695d46;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 15px;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.photos img {
+  border-radius: 15px;
+  height: auto;
+}
+
+.photos img:nth-child(1),
+.photos img:nth-child(3) {
+  width: 28%;
+  height: 20%;
+}
+
+.photos img:nth-child(2) {
+  width: 25%; 
+}
+
+@media (max-width: 1020px) {
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .aside {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photos img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .banner h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .photos img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

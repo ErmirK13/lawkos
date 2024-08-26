@@ -1,0 +1,233 @@
+.news-container {
+  padding: 20px;
+
+  .news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .news-title {
+      font-size: 36px;
+      margin-left: 50px;
+      color: #000000;
+      font-family: "Playfair Display", serif;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: #000000;
+        margin-top: 20px;
+      }
+    }
+
+    .view-all {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      color: black;
+      border: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+  }
+
+  .news-content {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+    .left-news, .right-news {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .left-news {
+      .news-item {
+        position: relative;
+
+        .news-image {
+          width: 100%;
+          height: auto;
+          border-radius: 15px;
+        }
+
+        .news-text {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          color: #ffffff;
+
+          .news-date {
+            font-size: 8px;
+            line-height: 15px;
+            font-family: "Wix Madefor Text";
+          }
+
+          .news-title {
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: bold;
+            font-family: "Wix Madefor Text";
+          }
+        }
+      }
+    }
+
+    .right-news {
+      .news-item {
+        position: relative;
+
+        .news-image {
+          width: 100%;
+          height: auto;
+          border-radius: 15px;
+        }
+
+        .news-text {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          color: #ffffff;
+
+          .news-date {
+            font-size: 8px;
+            line-height: 15px;
+            font-family: "Wix Madefor Text";
+          }
+
+          .news-title {
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: bold;
+            font-family: "Wix Madefor Text";
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .news-header {
+      .news-title {
+        font-size: 30px;
+        margin-left: 20px;
+      }
+
+      .view-all {
+        width: 60px;
+        height: 60px;
+        font-size: 10px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .news-header {
+      .news-title {
+        font-size: 24px;
+        margin-left: 10px;
+      }
+
+      .view-all {
+        width: 50px;
+        height: 50px;
+        font-size: 8px;
+        margin-right: 10px;
+      }
+    }
+
+    .news-content {
+      flex-direction: column;
+      gap: 1rem;
+
+      .left-news, .right-news {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .news-header {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .news-title {
+        font-size: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+
+      .view-all {
+        width: 45px;
+        height: 45px;
+        font-size: 7px;
+        margin-right: 0;
+      }
+    }
+
+    .news-content {
+      .left-news, .right-news {
+        .news-item {
+          .news-image {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .news-header {
+      .news-title {
+        font-size: 18px;
+      }
+
+      .view-all {
+        width: 40px;
+        height: 40px;
+        font-size: 6px;
+      }
+    }
+
+    .news-content {
+      .left-news, .right-news {
+        .news-item {
+          .news-image {
+            width: 100%;
+            height: auto;
+          }
+
+          .news-text {
+            font-size: 12px;
+
+            .news-date {
+              font-size: 6px;
+            }
+
+            .news-title {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
